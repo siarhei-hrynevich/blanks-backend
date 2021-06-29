@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="test.css">
     <style>
-        h1 {
-            color: salmon;
-            background-color: black;
+        .root {
+            display: flex;
+            justify-content: space-around;
+            display: -webkit-flex;
+            -webkit-flex-direction: row;
+            -webkit-justify-content: space-around;
+        }
+        .item {
+            display: -webkit-box;
         }
     </style>
 </head>
 <body>
-<h1><%=title %></h1>
-<input type="text" value="<%=content %>">
+
+<div class="root item">
+    <p class="item">first</p>
+    <p class="item">second</p>
+    <p class="item">third</p>
+</div>
+
 </body>
-<html>
+</html>

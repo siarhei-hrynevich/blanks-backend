@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=test nodemon index.js"
+    "start": "node index.js",
+    "dev": "NODE_ENV=qa nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,10 +13,14 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "html-pdf": "^3.0.1",
-    "nodemailer": "^6.6.1"
+    "nodemailer": "^6.6.1",
+    "phantomjs-prebuilt": "^2.1.7",
+    "wkhtmltopdf": "^0.4.0"
   },
   "devDependencies": {
     "ava": "^3.15.0"
