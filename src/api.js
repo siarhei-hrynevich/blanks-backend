@@ -16,7 +16,7 @@ router.post('/send/:template', parser, async (req, res) => {
                 content: await pdfService.createPdfFromTemplate(req.params.template, req.body.content, res)
             }
         ];
-        // await mailService.sendMail(req.body.email, 'Important subject', '', attachments);
+        await mailService.sendMail(req.body.email, 'Important subject', '', attachments);
     } catch (err) {
         res.status(500)
             .send(err.message)

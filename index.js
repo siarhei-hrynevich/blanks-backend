@@ -9,7 +9,9 @@ const cors = require('cors')
 const mailRouter = require('./src/api.js');
 
 const app = express();
-app.use('/api', mailRouter);
+
 app.use(cors());
+
+app.use('/api', mailRouter);
 
 app.listen(process.env.PORT || 3000);
